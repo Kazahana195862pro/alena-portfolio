@@ -1,32 +1,22 @@
-// 1. ПЕРЕКЛЮЧЕНИЕ ССЫЛОК МЕНЮ
-const navLinks = document.querySelectorAll('.navigation_link');
+document.addEventListener('DOMContentLoaded', () => {
+    const langOptions = document.querySelectorAll('.header_option');
+    const translatableElements = document.querySelectorAll('[data-en][data-ru]');
 
-navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        navLinks.forEach(item => item.classList.remove('navigation_link_active'));
-        this.classList.add('navigation_link_active');
-    });
-});
+    langOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            // Убираем активный класс у всех и добавляем кликнутому
+            langOptions.forEach(opt => opt.classList.remove('header_option_active'));
+            option.classList.add('header_option_active');
 
-// 2. СМЕНА ЯЗЫКОВ (RU / ENG)
-const langOptions = document.querySelectorAll('.header_option');
-const translatableElements = document.querySelectorAll('[data-en]');
+            const selectedLang = option.getAttribute('data-lang');
 
-langOptions.forEach(option => {
-    option.addEventListener('click', function() {
-        if (this.classList.contains('header_option_active')) return;
-
-        langOptions.forEach(opt => opt.classList.remove('header_option_active'));
-        this.classList.add('header_option_active');
-
-        const currentLang = this.getAttribute('data-lang');
-
-        translatableElements.forEach(element => {
-            if (currentLang === 'ru') {
-                element.textContent = element.getAttribute('data-ru');
-            } else {
-                element.textContent = element.getAttribute('data-en');
-            }
+            // Меняем текст на выбранный язык
+            translatableElements.forEach(elem => {
+                const translation = elem.getAttribute(`data-${selectedLang}`);
+                if (translation) {
+                    elem.textContent = translation;
+                }
+            });
         });
     });
 });
