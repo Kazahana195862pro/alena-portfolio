@@ -1,4 +1,14 @@
-// 1. СМЕНА ЯЗЫКОВ (RU / ENG)
+// 1. ПЕРЕКЛЮЧЕНИЕ ССЫЛОК МЕНЮ
+const navLinks = document.querySelectorAll('.navigation_link');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        navLinks.forEach(item => item.classList.remove('navigation_link_active'));
+        this.classList.add('navigation_link_active');
+    });
+});
+
+// 2. СМЕНА ЯЗЫКОВ (RU / ENG)
 const langOptions = document.querySelectorAll('.header_option');
 const translatableElements = document.querySelectorAll('[data-en]');
 
@@ -12,37 +22,13 @@ langOptions.forEach(option => {
         const currentLang = this.getAttribute('data-lang');
 
         translatableElements.forEach(element => {
-            // Используем innerHTML вместо textContent, чтобы сохранять теги <br>
             if (currentLang === 'ru') {
-                element.innerHTML = element.getAttribute('data-ru');
+                element.textContent = element.getAttribute('data-ru');
             } else {
-                element.innerHTML = element.getAttribute('data-en');
+                element.textContent = element.getAttribute('data-en');
             }
         });
     });
 });
 
-// 2. АВТОМАТИЧЕСКАЯ ПОДСВЕТКА МЕНЮ ПРИ ПРОКРУТКЕ
-const sections = document.querySelectorAll('header, section');
-const navLinks = document.querySelectorAll('.navigation_link');
-
-window.addEventListener('scroll', () => {
-    let currentSectionId = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        // Проверяем, находится ли экран пользователя в области текущей секции
-        if (window.scrollY >= sectionTop - 150) {
-            currentSectionId = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('navigation_link_active');
-        if (link.getAttribute('href') === `#${currentSectionId}`) {
-            link.classList.add('navigation_link_active');
-        }
-    });
-});
 
