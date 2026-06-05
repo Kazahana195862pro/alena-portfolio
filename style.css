@@ -54,10 +54,10 @@ body {
 .header { 
     display: flex; 
     justify-content: space-between; 
-    align-items: flex-end; 
+    align-items: flex-end; /* Все элементы ровняются по нижнему краю */
     padding: 40px 0; 
     flex-wrap: wrap; 
-    position: relative; 
+    position: relative;  
 } 
 
 .header_title { 
@@ -80,9 +80,9 @@ body {
     font-family: Roboto, Arial, sans-serif; 
     font-weight: bold; 
     white-space: nowrap; 
-    writing-mode: vertical-rl; 
-    transform: rotate(180deg); 
     color: #828282;
+    font-size: 18px; /* Делаем размер как у описания */
+    line-height: 110%;
 } 
 
 .header_option {
