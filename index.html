@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alena Tolochko - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <div class="container"> 
+        <header class="header" id="home"> 
+            <nav class="navigation"> 
+                <ul class="navigation_list"> 
+                    <li class="navigation_item"><a href="#home" class="navigation_link navigation_link_active" data-en="Home" data-ru="Главная">Home</a></li> 
+                    <li class="navigation_item"><a href="#about" class="navigation_link" data-en="About me" data-ru="Обо мне">About me</a></li> 
+                    <li class="navigation_item"><a href="#skills" class="navigation_link" data-en="Skills" data-ru="Навыки">Skills</a></li> 
+                    <li class="navigation_item"><a href="#portfolio" class="navigation_link" data-en="Portfolio" data-ru="Портфолио">Portfolio</a></li> 
+                    <li class="navigation_item"><a href="#contacts" class="navigation_link" data-en="Contacts" data-ru="Контакты">Contacts</a></li> 
+                </ul> 
+            </nav> 
+            <h1 class="header_title">Alena<br>Tolochko</h1> 
+            <p class="header_description" data-en="UX | UI designer, 25 years old, Moscow" data-ru="UX | UI дизайнер, 25 лет, Москва">UX | UI designer, 25 years old, Moscow</p> 
+            <p class="header_switcher"> 
+                <span class="header_option" data-lang="ru">RU</span> | <span class="header_option header_option_active" data-lang="en">ENG</span> 
+            </p> 
+            <!-- Здесь оставляем ссылку на локальную папку, как положено для GitHub -->
+            <img src="images/photo.jpg" alt="Alena Tolochko" class="header_avatar"> 
+        </header> 
+ 
+        <section id="about" class="site-section">
+            <h2 data-en="About me" data-ru="Обо мне">About me</h2>
+            <p data-en="Here is some information about me..." data-ru="Здесь будет информация обо мне...">Here is some information about me...</p>
+        </section>
+ 
+        <section id="skills" class="site-section">
+            <h2 data-en="Skills" data-ru="Навыки">Skills</h2>
+            <p data-en="My professional skills..." data-ru="Мои профессиональные навыки...">My professional skills...</p>
+        </section>
+ 
+        <section id="portfolio" class="site-section">
+            <h2 data-en="Portfolio" data-ru="Портфолио">Portfolio</h2>
+            <p data-en="My latest projects..." data-ru="Мои последние проекты...">My latest projects...</p>
+        </section>
+ 
+        <section id="contacts" class="site-section">
+            <h2 data-en="Contacts" data-ru="Контакты">Contacts</h2>
+            <p data-en="Get in touch with me..." data-ru="Как со мной связаться...">Get in touch with me...</p>
+        </section>
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>

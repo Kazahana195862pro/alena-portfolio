@@ -1,0 +1,118 @@
+html {
+    scroll-behavior: smooth;
+}
+ 
+body {
+    margin: 0;
+    padding: 0;
+}
+ 
+.container { 
+    max-width: 940px; 
+    margin: 0 auto; 
+} 
+ 
+.navigation { 
+    border-bottom: 1px solid #828282; 
+    padding: 32px 0; 
+} 
+ 
+.navigation_list { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+} 
+ 
+.navigation_item { 
+    display: inline-block; 
+    margin-right: 146px; 
+} 
+ 
+.navigation_item:last-child { 
+    margin-right: 0; 
+} 
+ 
+.navigation_link { 
+    text-wrap: nowrap; 
+    color: #828282; 
+    text-decoration: none; 
+    font-size: 20px; 
+    font-family: Roboto, Arial, sans-serif; 
+    font-weight: 400; 
+    line-height: 100%; 
+    cursor: pointer;
+} 
+ 
+.navigation_link_active { 
+    color: #070707; 
+} 
+ 
+.header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-end; 
+    padding: 40px 0; 
+    flex-wrap: wrap; 
+    position: relative; 
+} 
+ 
+.header_title { 
+    margin: 0; 
+    font-family: Roboto, Arial, sans-serif; 
+} 
+ 
+.header_description { 
+    font-size: 18px; 
+    font-family: Roboto, Arial, sans-serif; 
+    text-align: left; 
+    max-width: 250px; 
+} 
+ 
+.header_switcher { 
+    margin: 0; 
+    font-family: Roboto, Arial, sans-serif; 
+    font-weight: bold; 
+    white-space: nowrap; 
+    writing-mode: vertical-rl; 
+    transform: rotate(180deg); 
+    color: #828282;
+} 
+ 
+.header_option {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+ 
+.header_option_active {
+    color: #070707;
+}
+ 
+.header img { 
+    width: 100%; 
+    margin-top: 30px; 
+}
+ 
+.site-section {
+    padding: 100px 0;
+    min-height: 500px; 
+    border-bottom: 1px solid #e0e0e0; 
+}
+ 
+.site-section:last-of-type {
+    border-bottom: none; 
+}
+ 
+.site-section h2 {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 34px;
+    color: #070707;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+ 
+.site-section p {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 18px;
+    color: #070707;
+    line-height: 1.6;
+}
