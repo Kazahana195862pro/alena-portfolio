@@ -19,13 +19,15 @@ body {
  
 .navigation_list { 
     list-style: none; 
-    padding: 0; 
-    margin: 0; 
+    padding: 0; 
+    margin: 0; 
+    display: flex;
+    justify-content: space-between; 
 } 
  
 .navigation_item { 
     display: inline-block; 
-    margin-right: 146px; 
+    margin-right: 0; 
 } 
  
 .navigation_item:last-child { 
@@ -50,7 +52,7 @@ body {
 .header { 
     display: flex; 
     justify-content: space-between; 
-    align-items: flex-end; 
+    align-items: center;
     padding: 40px 0; 
     flex-wrap: wrap; 
     position: relative; 
@@ -89,7 +91,10 @@ body {
  
 .header img { 
     width: 100%; 
-    margin-top: 30px; 
+    max-width: 940px;
+    height: auto;
+    margin-top: 30px; 
+    display: block; 
 }
  
 .site-section {
