@@ -1,35 +1,41 @@
+/* Базовые настройки и сброс отступов браузера */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    background-color: #ffffff;
+    color: #070707;
 }
 
 .container { 
     max-width: 940px; 
     margin: 0 auto; 
+    padding: 0 20px; 
 } 
 
+/* Навигационное меню */
 .navigation { 
     border-bottom: 1px solid #828282; 
     padding: 32px 0; 
+    width: 100%;
 } 
 
 .navigation_list { 
     list-style: none; 
-    padding: 0; 
-    margin: 0; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
 } 
 
 .navigation_item { 
-    display: inline-block; 
-    margin-right: 146px; 
-} 
-
-.navigation_item:last-child { 
-    margin-right: 0; 
+    margin: 5px 0;
 } 
 
 .navigation_link { 
@@ -47,18 +53,21 @@ body {
     color: #070707; 
 } 
 
+/* Главная шапка (Хедер) */
 .header { 
     display: flex; 
-    justify-content: space-between; 
-    align-items: flex-end; 
+    flex-direction: row;            /* Элементы внутри строятся горизонтально */
+    justify-content: space-between; /* Распределяем имя, описание и языки по краям */
+    align-items: flex-end;          /* Выравниваем текст по нижней базовой линии */
     padding: 40px 0; 
-    flex-wrap: wrap; 
-    position: relative; 
+    flex-wrap: wrap;                /* Позволяет аватарке упасть на вторую строку */
+    width: 100%;
 } 
 
 .header_title { 
-    margin: 0; 
     font-family: Roboto, Arial, sans-serif; 
+    font-size: 47px;
+    line-height: 110%;
 } 
 
 .header_description { 
@@ -68,14 +77,17 @@ body {
     max-width: 250px; 
 } 
 
+/* Переключатель языков (Строго вертикальный) */
 .header_switcher { 
-    margin: 0; 
+    display: flex;
+    flex-direction: column;         /* Выстраивает RU и ENG вертикально */
+    align-items: center;            /* Центрирует их по горизонтальной оси */
+    gap: 6px;                       /* Отступ между языками */
     font-family: Roboto, Arial, sans-serif; 
     font-weight: bold; 
-    white-space: nowrap; 
-    writing-mode: vertical-rl; 
-    transform: rotate(180deg); 
     color: #828282;
+    font-size: 18px; 
+    line-height: 110%;
 } 
 
 .header_option {
@@ -87,11 +99,16 @@ body {
     color: #070707;
 }
 
-.header img { 
+/* Аватарка (Занимает всю ширину снизу) */
+.header img.header_avatar { 
     width: 100%; 
-    margin-top: 30px; 
+    height: auto;
+    margin-top: 50px; 
+    display: block;
+    flex-basis: 100%;               /* Принудительно переносит картинку под текст */
 }
 
+/* Секции сайта */
 .site-section {
     padding: 100px 0;
     min-height: 500px; 
@@ -106,7 +123,6 @@ body {
     font-family: Roboto, Arial, sans-serif;
     font-size: 34px;
     color: #070707;
-    margin-top: 0;
     margin-bottom: 30px;
 }
 
@@ -115,8 +131,4 @@ body {
     font-size: 18px;
     color: #070707;
     line-height: 1.6;
-}
-
-
-
 }
